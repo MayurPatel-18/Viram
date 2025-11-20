@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRAM ÉLECTRIQUE INC. - Entrepreneur Électricien Montréal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* Custom scrollbar style for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #f97316; /* Orange-500 */
+            border-radius: 4px;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 4rem;
+            }
+        }
+        .analysis-loading::after {
+            content: '...';
+            animation: dot-animation 1s infinite step-start;
+        }
+        @keyframes dot-animation {
+            0% { content: ''; }
+            33% { content: '.'; }
+            66% { content: '..'; }
+            100% { content: '...'; }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+            <!-- Logo (Image) -->
+            <a href="#accueil" class="flex items-center">
+                <!-- IMPORTANT: Replace 'your-image-path.png' with the actual path to your logo image file (e.g., 'viram-logo.png') -->
+                <img src="logo.JPG" onerror="this.onerror=null;this.src='https://placehold.co/150x40/000000/F97316?text=VIRAM%20%C9LECTRIQUE'" alt="VIRAM ÉLECTRIQUE INC. Logo" class="h-20">
+            </a>
+
+            <!-- Navigation Links (Hidden on mobile) -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#accueil" class="text-gray-700 hover:text-orange-500 transition duration-300">Accueil</a>
+                <a href="#services" class="text-gray-700 hover:text-orange-500 transition duration-300">Services</a>
+                <a href="#soumission" class="text-gray-700 hover:text-orange-500 transition duration-300">Soumission</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange-500 transition duration-300">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button (Not functional for a static page, but for aesthetic completeness) -->
+            <button class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="section-padding bg-gray-900 text-white min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-sm font-semibold text-orange-500 uppercase tracking-widest">Votre Expert Électricien à Montréal</span>
+                <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                    Des Solutions Électriques <span class="text-orange-500">Fiables</span> et <span class="text-orange-500">Sécuritaires</span>.
+                </h1>
+                <p class="mt-6 text-lg text-gray-300">
+                    VIRAM ÉLECTRIQUE INC. est votre partenaire de confiance pour tous vos besoins résidentiels et commerciaux dans la grande région de Montréal. Qualité, conformité et service rapide garantis.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#soumission" class="inline-block py-3 px-8 bg-orange-500 text-white text-lg font-bold rounded-xl shadow-lg hover:bg-orange-600 transition duration-300 transform hover:scale-[1.02]">
+                        Demander une Soumission Gratuite
+                    </a>
+                    <a href="#services" class="inline-block py-3 px-8 bg-transparent border-2 border-white text-white text-lg font-medium rounded-xl hover:bg-white hover:text-gray-900 transition duration-300">
+                        Voir nos Services
+                    </a>
+                </div>
+            </div>
+            <!-- Mock visual element (could be an image or illustration) -->
+            <div class="hidden md:block bg-orange-500/10 p-8 rounded-2xl shadow-2xl relative overflow-hidden h-96">
+                <div class="absolute inset-0 flex items-center justify-center opacity-10">
+                    <svg class="w-2/3 h-2/3 text-orange-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 1v10h4L11 23v-9H7L13 1z" />
+                    </svg>
+                </div>
+                <div class="absolute top-8 left-8 text-xl font-bold text-white">RBQ: XXXXX-XXXX-XX</div>
+                <div class="absolute bottom-8 right-8 text-xl font-bold text-white">Licence Maître Électricien</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Nos Domaines d'Expertise</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                De la petite réparation à la nouvelle construction complète, nous couvrons tous les aspects de l'électricité.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1: Résidentiel -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-xl border-t-4 border-orange-500 transition duration-300 hover:shadow-2xl">
+                    <div class="text-orange-500 mb-4">
+                        <!-- Icon: Home -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Électricité Résidentielle</h3>
+                    <p class="text-gray-600">Installation de bornes de recharge, panneaux électriques, éclairage intérieur/extérieur, chauffage, et mise aux normes.</p>
+                </div>
+
+                <!-- Service 2: Commercial -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-xl border-t-4 border-orange-500 transition duration-300 hover:shadow-2xl">
+                    <div class="text-orange-500 mb-4">
+                        <!-- Icon: Building -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-4a1 1 0 011-1h2a1 1 0 011 1v4M7 17h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Projets Commerciaux</h3>
+                    <p class="text-gray-600">Câblage structuré, systèmes d'éclairage d'urgence, installation de machinerie, entretien préventif et correctif.</p>
+                </div>
+
+                <!-- Service 3: Rénovation/Construction -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-xl border-t-4 border-orange-500 transition duration-300 hover:shadow-2xl">
+                    <div class="text-orange-500 mb-4">
+                        <!-- Icon: Wrench/Tools -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Rénovation & Construction</h3>
+                    <p class="text-gray-600">Planification complète de systèmes électriques pour constructions neuves et modernisation de bâtiments existants.</p>
+                </div>
+
+                <!-- Service 4: Dépannage -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-xl border-t-4 border-orange-500 transition duration-300 hover:shadow-2xl">
+                    <div class="text-orange-500 mb-4">
+                        <!-- Icon: Zap/Alert -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dépannage d'Urgence</h3>
+                    <p class="text-gray-600">Intervention rapide pour pannes électriques, courts-circuits, problèmes de panneaux ou urgences 24/7 dans la région de Montréal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Request (Soumission) Section -->
+   <section id="soumission" class="section-padding bg-gray-100">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Demandez votre Soumission</h2>
+        <p class="text-xl text-center text-gray-600 mb-12">
+            Décrivez-nous votre projet ou votre besoin. L'ajout de photos nous aide grandement à estimer le travail avec précision !
+        </p>
+
+        <form id="quoteForm" method="POST" enctype="multipart/form-data" action="https://formsubmit.co/mayur_p01@outlook.com" class="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl border-t-4 border-orange-500">
+           <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom Complet *</label>
+                    <input type="text" id="name" name="Nom_Complet" required class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-orange-500 focus:border-orange-500 transition duration-150" placeholder="Votre nom et prénom">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone *</label>
+                    <input type="tel" id="phone" name="Telephone" required class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-orange-500 focus:border-orange-500 transition duration-150" placeholder="(514) 123-4567">
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Courriel *</label>
+                <input type="email" id="email" name="Courriel" required class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-orange-500 focus:border-orange-500 transition duration-150" placeholder="votre.courriel@exemple.com">
+            </div>
+            
+            <div class="mb-6">
+                <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Description du Travail *</label>
+                <textarea id="description" name="Description_du_Travail" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-orange-500 focus:border-orange-500 transition duration-150" placeholder="Décrivez le type de travail : changement de panneau, ajout de prise, borne de recharge, etc."></textarea>
+                
+               
+            </div>
+
+           
+
+
+            <div class="mb-8">
+                <label for="photos" class="block text-sm font-medium text-gray-700 mb-2">Ajouter des photos (Optionnel)</label>
+                <input type="file" id="photos" name="Photos[]" multiple accept="image/*" class="w-full text-sm text-gray-500
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-full file:border-0
+                    file:text-sm file:font-semibold
+                    file:bg-orange-50 file:text-orange-700
+                    hover:file:bg-orange-100
+                    transition duration-150
+                ">
+                <p class="mt-2 text-xs text-gray-500">Formats acceptés : JPG, PNG. Maximum 5 fichiers.</p>
+            </div>
+
+            <div id="statusMessage" class="mt-4 p-4 rounded-xl text-center font-semibold hidden transition duration-300"></div>
+
+
+            <button type="submit" id="submitButton" class="w-full py-3 px-4 bg-gray-900 text-white text-lg font-bold rounded-xl shadow-lg hover:bg-orange-500 transition duration-300 flex items-center justify-center">
+                <span id="buttonText">Envoyer ma Demande de Soumission</span>
+                <svg id="loadingSpinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </button>
+        </form>
+    </div>
+</section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto section-padding pt-10 pb-8">
+            <div class="grid md:grid-cols-4 gap-8 border-b border-gray-700 pb-10">
+                <!-- Company Info -->
+                <div>
+                    <h4 class="text-xl font-bold text-orange-500 mb-4">VIRAM ÉLECTRIQUE INC.</h4>
+                    <p class="text-sm text-gray-400">Votre partenaire d'affaires en électricité à Montréal et environs. Licencié et assuré.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-orange-500 transition duration-300">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition duration-300">Nos Services</a></li>
+                        <li><a href="#soumission" class="text-gray-400 hover:text-orange-500 transition duration-300">Demander une Soumission</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info (with TTS Feature) -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contactez-nous</h4>
+                    <p class="text-sm space-y-2">
+                        <span class="block text-gray-400">Courriel: <a href="mailto:info@viramelectrique.com" class="hover:text-orange-500">info@viramelectrique.com</a></span>
+                       
+                    </p>
+                </div>
+                <!-- Location -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Localisation</h4>
+                    <p class="text-sm text-gray-400">
+                        Desservons principalement la grande région de Montréal (Laval, Rive-Nord, Rive-Sud).
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center text-sm text-gray-500">
+                &copy; 2025 VIRAM ÉLECTRIQUE INC. Tous droits réservés. | RBQ: XXXXX-XXXX-XX
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      
+        /**
+         * Converts a base64 string to an ArrayBuffer.
+         * @param {string} base64 The base64 encoded string.
+         * @returns {ArrayBuffer}
+         */
+        function base64ToArrayBuffer(base64) {
+            const binaryString = atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        /**
+         * Converts signed PCM 16-bit data to a WAV Blob.
+         * @param {Int16Array} pcm16 The PCM audio data.
+         * @param {number} sampleRate The sample rate of the audio.
+         * @returns {Blob} The WAV Blob.
+         */
+        function pcmToWav(pcm16, sampleRate) {
+            const numChannels = 1;
+            const bytesPerSample = 2; // 16-bit PCM
+            const blockAlign = numChannels * bytesPerSample;
+            const byteRate = sampleRate * blockAlign;
+            const dataSize = pcm16.length * bytesPerSample;
+
+            const buffer = new ArrayBuffer(44 + dataSize);
+            const view = new DataView(buffer);
+
+            // RIFF chunk descriptor
+            view.setUint32(0, 0x52494646, false); // "RIFF"
+            view.setUint32(4, 36 + dataSize, true); // ChunkSize
+            view.setUint32(8, 0x57415645, false); // "WAVE"
+
+            // fmt sub-chunk
+            view.setUint32(12, 0x666d7420, false); // "fmt "
+            view.setUint32(16, 16, true); // Subchunk1Size (16 for PCM)
+            view.setUint16(20, 1, true); // AudioFormat (1 for PCM)
+            view.setUint16(22, numChannels, true); // NumChannels
+            view.setUint32(24, sampleRate, true); // SampleRate
+            view.setUint32(28, byteRate, true); // ByteRate
+            view.setUint16(32, blockAlign, true); // BlockAlign
+            view.setUint16(34, 16, true); // BitsPerSample
+
+            // data sub-chunk
+            view.setUint32(36, 0x64617461, false); // "data"
+            view.setUint32(40, dataSize, true); // Subchunk2Size
+
+            // Write PCM data
+            let offset = 44;
+            for (let i = 0; i < pcm16.length; i++) {
+                view.setInt16(offset, pcm16[i], true); // Use setInt16 for signed 16-bit
+                offset += 2;
+            }
+
+            return new Blob([buffer], { type: 'audio/wav' });
+        }
+
+
+        // Function for exponential backoff retry logic
+        async function fetchWithExponentialBackoff(url, options, maxRetries = 5) {
+            for (let attempt = 0; attempt < maxRetries; attempt++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.ok) {
+                        return response;
+                    }
+                    if (response.status === 429 && attempt < maxRetries - 1) {
+                        const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                } catch (error) {
+                    if (attempt === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            throw new Error("Maximum retry attempts reached.");
+        }
+
+
+      
+
+    
+    </script>
+
+</body>
+</html>
